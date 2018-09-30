@@ -13,9 +13,9 @@ public class NetworkState {
     private final String msg;
 
     public static final NetworkState LOADED;
-    public static final NetworkState LOADING;
+    static final NetworkState LOADING;
 
-    public NetworkState(Status status, String msg) {
+    NetworkState(Status status, String msg) {
         this.status = status;
         this.msg = msg;
     }

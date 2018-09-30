@@ -1,9 +1,7 @@
 package com.dhoomilbsheta.pagingnews.data;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.dhoomilbsheta.pagingnews.api.ApiConstants;
 import com.dhoomilbsheta.pagingnews.api.NewsService;
 import com.dhoomilbsheta.pagingnews.api.ServiceGenerator;
 import com.dhoomilbsheta.pagingnews.db.AppDatabase;

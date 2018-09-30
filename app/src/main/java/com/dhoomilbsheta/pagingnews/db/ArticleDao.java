@@ -4,7 +4,6 @@ import com.dhoomilbsheta.pagingnews.vo.Article;
 
 import java.util.List;
 
-import androidx.lifecycle.LiveData;
 import androidx.paging.DataSource;
 import androidx.room.Dao;
 import androidx.room.Insert;
@@ -18,9 +17,6 @@ public interface ArticleDao {
 
     @Query("SELECT count(url) FROM article")
     int getCount();
-
-    @Query("SELECT * FROM article")
-    LiveData<List<Article>> getAll();
 
     @Query("SELECT * FROM article")
     DataSource.Factory<Integer, Article> get();

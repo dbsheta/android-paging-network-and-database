@@ -70,8 +70,6 @@ public class NewsBoundaryCallback extends PagedList.BoundaryCallback<Article> im
             networkState.postValue(NetworkState.LOADED);
             executor.execute(() -> {
                 articleDao.insert(response.body().getArticles());
-                int count = articleDao.getCount();
-                Log.d("NEWS", "Inserted in db: " + count);
             });
         } else {
             Log.e("NEWS ERROR", response.message());

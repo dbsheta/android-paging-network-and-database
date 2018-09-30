@@ -10,6 +10,7 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Article.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
+    private static final String DB_NAME = "app_database";
 
     public abstract ArticleDao articleDao();
 
@@ -20,7 +21,7 @@ public abstract class AppDatabase extends RoomDatabase {
             synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class, "app_database")
+                            AppDatabase.class, DB_NAME)
                             .build();
                 }
             }
